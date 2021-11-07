@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TracTracker Driver Data</title>
+
+<style>
+
+body { 
+	max-width: 1080px; 
+	margin: 0 auto !important; 
+	float: none !important; 
+}
+
+
+div {
+  width: 320px;
+  padding: 10px;
+  margin: 0;
+	  zoom:69%;
+}
+
+.header {
+	 padding: 60px;
+	 text-align: left;
+	 color: black;
+	 font-size: 30px;
+	font-family: Helvetica;
+	width: 100%;
+				
+}
+
+#title {
+	font-family: Helvetica;
+	text-align: left;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 5px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+<script>
+
+function retrieveData()
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "http://raspberrypi.local/hack2021/data", false ); 
+    xmlHttp.send( null );
+    let text = xmlHttp.responseText;
+	const myArray = text.split("\n");
+    var table = document.getElementById("customers");
+  
+  	var row = table.insertRow(1);
+ 	var cell1 = row.insertCell(0);
+  	var cell2 = row.insertCell(1);
+  	var cell3 = row.insertCell(2);
+  	var cell4 = row.insertCell(3);
+  	var cell5 = row.insertCell(4);
+  	var cell6 = row.insertCell(5);
+  	var cell7 = row.insertCell(6);
+  	var cell8 = row.insertCell(7);
+  	var cell9 = row.insertCell(8);
+  	cell1.innerHTML = "Ramona";
+  	cell3.innerHTML = myArray[0];
+  	cell4.innerHTML = myArray[1];
+  	cell5.innerHTML = myArray[2];
+  	cell2.innerHTML = myArray[3];
+  	cell7.innerHTML = myArray[4];
+  	cell8.innerHTML = myArray[5];
+  	cell9.innerHTML = myArray[6];
+  	cell6.innerHTML = myArray[7];
+    
+}
+
+var intervalId = window.setInterval(function(){
+  retrieveData();
+}, 500);
+
+</script>
+
+
+</head>
+<body>
+
+<!--
+<div>
+<h1 id="title">TracTracker Driver Data</h1> 
+</div> -->
+
+
+<div class="header">
+  	<h1>TracTracker Driver Data</h1
+</div>
+
+
+<div>
+<table id="customers">
+  <tr>
+    <th>Name</th>
+    <th>Actual Recommended Speed</th>
+    <th>Sum of All Recommended Speeds</th>
+    <th>Number of Recommended Speeds</th>
+    <th>Average of All Recommended Speeds</th>
+    <th>Actual Current Speed</th>
+    <th>Sum of All Current Speeds</th>
+    <th>Number of Current Speeds</th>
+    <th>Average of All Current Speeds</th>
+  </tr>
+</table>
+</div>
+
+</body>
+</html>
