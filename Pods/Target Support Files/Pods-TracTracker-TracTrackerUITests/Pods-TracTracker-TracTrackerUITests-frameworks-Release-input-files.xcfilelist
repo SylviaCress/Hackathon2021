@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-TracTracker-TracTrackerUITests/Pods-TracTracker-TracTrackerUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ABGaugeViewKit/ABGaugeViewKit.framework
+${BUILT_PRODUCTS_DIR}/LMGaugeViewSwift/LMGaugeViewSwift.framework
+${BUILT_PRODUCTS_DIR}/MeterGauge/MeterGauge.framework

@@ -1,0 +1,24 @@
+PODS:
+  - ABGaugeViewKit (1.0.1)
+  - LMGaugeViewSwift (1.0.0)
+  - MeterGauge (0.0.6)
+
+DEPENDENCIES:
+  - ABGaugeViewKit
+  - LMGaugeViewSwift
+  - MeterGauge
+
+SPEC REPOS:
+  trunk:
+    - ABGaugeViewKit
+    - LMGaugeViewSwift
+    - MeterGauge
+
+SPEC CHECKSUMS:
+  ABGaugeViewKit: b69c855c2878e5ba49605b0662d409c1577ed198
+  LMGaugeViewSwift: 049e8550417b3b00c67f396103c52fb3730550bf
+  MeterGauge: e3243120af0ca69f807e72d459707edc7d5447da
+
+PODFILE CHECKSUM: 9b2f36410e2d59b822bd47d96d7e11f9008570af
+
+COCOAPODS: 1.11.2
